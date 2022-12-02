@@ -39,14 +39,10 @@ def rps_score(elf_a, elf_b):
   exit(1)
 
 
-def parse_rps(s: str):
-  return s.strip()
-
-
 score_strategy_a = 0
 score_strategy_b = 0
 
-for line in file_lines("./input_2.txt", parser=parse_rps):
+for line in file_lines("./input_2.txt"):
   # Strategy A
   line = line.replace('A', 'R').replace('X', 'R')
   line = line.replace('B', 'P').replace('Y', 'P')
