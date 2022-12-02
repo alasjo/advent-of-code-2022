@@ -5,7 +5,7 @@
 2. Following the Elf's instructions for the second column, what would your total score be if everything goes exactly according to your strategy guide?
 '''
 
-from santas_helpers import file_lines
+from santas_helpers import file_lines, dict_value_to_key
 
 rps_winner = {
   'R': 'S',
@@ -59,9 +59,8 @@ for line in file_lines("./input_2.txt"):
     score_strategy_b += rps_score(elf_a, elf_a)
   elif elf_b == 'S':
     # WIN
-    winner = list(rps_winner.keys())
-    loser = list(rps_winner.values())
-    score_strategy_b += rps_score(elf_a, winner[loser.index(elf_a)])
+    win = dict_value_to_key(rps_winner, elf_a)
+    score_strategy_b += rps_score(elf_a, win)
 
 print(f"Part 1: {score_strategy_a}")
 print(f"Part 2: {score_strategy_b}")
