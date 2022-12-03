@@ -20,4 +20,4 @@ for line in file_lines("./input_X.txt", parser=parse_):
   data.append(line)
 
 print(f"Part 1: {data}")
-#print(f"Part 2: {sum(elves[:3])}")
+#print(f"Part 2: {data}")
