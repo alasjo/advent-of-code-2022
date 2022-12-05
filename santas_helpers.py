@@ -3,13 +3,13 @@ Helper functions for AoC solutions
 '''
 
 # Read file lines, optionally parse them
-def file_lines(filename, parser=None):
+def file_lines(filename, parser=None, trim=True):
   with open(filename) as f:
     for line in f.readlines():
       if parser is None:
-        yield line.strip()
+        yield line.strip() if trim else line
       else:
-        yield parser(line.strip())
+        yield parser(line.strip() if trim else line)
 
 
 # Return a dict key corresponding to a value
