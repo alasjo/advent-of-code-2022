@@ -1,8 +1,8 @@
 '''
---- Day X: Description ---
+--- Day 6: Tuning Trouble ---
 
-1. Do A
-2. Do B
+1. How many characters need to be processed before the first start-of-packet marker is detected?
+2. How many characters need to be processed before the first start-of-message marker is detected?
 '''
 
 from santas_helpers import file_lines
