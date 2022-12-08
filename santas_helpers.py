@@ -22,3 +22,18 @@ def dict_value_to_key(d: dict, v):
 # Intersect two iterables, returning a new list of the common elements
 def list_intersect(l, m):
   return [e for e in list(l) if e in list(m)]
+
+
+def multiply_list(l: list):
+  result = 1
+  for e in l:
+    result *= e
+  return result
+
+
+two_axis_directions = {
+  'U': (0, -1), # UP
+  'R': (1, 0),  # RIGHT
+  'D': (0, 1),  # DOWN
+  'L': (-1, 0), # LEFT
+}
