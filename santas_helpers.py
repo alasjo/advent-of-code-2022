@@ -63,6 +63,12 @@ def two_d_euclidean_distance(x_1, y_1, x_2, y_2):
   return math.sqrt(math.pow(x_2 - x_1, 2) + math.pow(y_2 - y_1, 2))
 
 
+def gcd(a, b):
+  while b:
+    a, b = b, a % b
+  return abs(a)
+
+
 two_axis_directions = {
   'U': (0, -1), # UP
   'R': (1, 0),  # RIGHT
